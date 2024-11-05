@@ -1,0 +1,66 @@
+* {
+  box-sizing: border-box;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.dark h2 {
+  color: orange;
+}
+
+.fancy-intro {
+  background-color: yellow;
+  color: red;
+  padding: 20px;
+}
+
+h2 {
+  display: inline-block;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 80%);
+  display: none;
+  place-items: center;
+}
+
+.modal.is-visible {
+  display: grid;
+}
+
+.modal-content {
+  padding: 2rem;
+  background-color: white;
+  transform: translateY(100vw);
+  transition: transform 1s linear;
+}
+
+.modal-content.content-visible {
+  transform: translateY(0);
+}
+
+h2 span {
+  display: inline-block;
+}
+
+.spin {
+  animation: spinMe 1s linear infinite;
+}
+
+@keyframes spinMe {
+  from {
+    transform: rotate(0deg)
+  }
+  to {
+    transform: rotate(3turn)
+  }
+}
